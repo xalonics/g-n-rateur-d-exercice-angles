@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Participant</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Rejoindre la partie</h1>
+      <section class="card">
+        <form id="join-form" class="row">
+          <input id="room" placeholder="Code de salle" required />
+          <input id="name" placeholder="Votre prénom" required />
+          <button class="button" type="submit">Se connecter</button>
+        </form>
+        <p id="join-status"></p>
+      </section>
+
+      <section class="card">
+        <h2 id="question-title">En attente...</h2>
+        <div id="choices" class="choices"></div>
+        <p id="feedback"></p>
+      </section>
+
+      <section class="card">
+        <h2>Classement</h2>
+        <ul id="leaderboard"></ul>
+      </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="join.js"></script>
+  </body>
+</html>
