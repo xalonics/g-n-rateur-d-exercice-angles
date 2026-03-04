@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maître du jeu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Console maître du jeu</h1>
+
+      <section class="card">
+        <h2>Salle</h2>
+        <button id="create-room" class="button">Créer une salle</button>
+        <p id="room-code"></p>
+        <div id="qr"></div>
+      </section>
+
+      <section class="card">
+        <h2>Questions préparées</h2>
+        <form id="question-form" class="row">
+          <input id="prompt" placeholder="Question (ex: Quel titre joue l'orchestre ?)" required />
+          <input id="answer" placeholder="Bonne réponse (titre)" required />
+          <button class="button" type="submit">Ajouter</button>
+        </form>
+        <ol id="question-list"></ol>
+        <button id="save-questions" class="button secondary">Enregistrer les questions</button>
+      </section>
+
+      <section class="card">
+        <h2>Partie</h2>
+        <p>Participants: <span id="players">-</span></p>
+        <div class="actions">
+          <button id="start-game" class="button">Lancer la partie</button>
+          <button id="next-question" class="button secondary">Question suivante</button>
+          <button id="reveal" class="button secondary">Révéler la réponse</button>
+        </div>
+        <p id="host-status"></p>
+        <ul id="leaderboard"></ul>
+      </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="host.js"></script>
+  </body>
+</html>

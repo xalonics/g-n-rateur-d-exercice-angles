@@ -1,0 +1,14 @@
+{
+  "name": "blind-test-physique",
+  "version": "1.0.0",
+  "description": "Application de blind test pour orchestre",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
